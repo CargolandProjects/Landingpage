@@ -8,7 +8,7 @@ import { text } from "stream/consumers";
 const items = [
   { text: "Highly rated riders", icon: MapPin, color: "#2ED573" },
   {
-    text: "20/7 support for customers and vendors",
+    text: "24/7 support for customers and vendors",
     icon: Headphones,
     color: "#FFB6C1",
   },

@@ -40,7 +40,7 @@ export default function FeatureCarousel() {
            L1440,0
            L0,0
            Z"
-            fill="#f55b00"
+            fill="#ffffff"
           />
         </svg>
       </div>
