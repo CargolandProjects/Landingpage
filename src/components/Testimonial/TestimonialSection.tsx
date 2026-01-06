@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { satoshi } from "@/app/fonts";
@@ -33,6 +33,15 @@ export default function TestimonialsSection() {
     setDirection(1);
     setActive((p) => mod(p + 1, total));
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDirection(1); // slide to the right
+      setActive((prev) => mod(prev + 1, total));
+    }, 3000); // 5 seconds
+
+    return () => clearInterval(interval);
+  }, [total]);
 
   return (
     <section className={`bg-white py-24 ${satoshi.className}`}>
