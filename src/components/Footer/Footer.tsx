@@ -45,12 +45,12 @@ const supportLinks = [
 
 const quickLinks = [
   { label: "About us", href: "#" },
-  { label: "Contact us", href: "#" },
+  { label: "Contact us", href: "/contact-us" },
 ];
 
 export default function Footer() {
   return (
-    <footer className={`bg-[#342624] text-[#F6EDE8] ${satoshi.className}`}>
+    <footer className={`bg-[#2D2020] text-[#F6EDE8] ${satoshi.className}`}>
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 md:pt-20 md:pb-10">
         <div className="grid gap-y-12 gap-x-8 lg:grid-cols-[1.5fr_0.65fr_0.55fr_0.9fr]">
           <div className="max-w-[440px]">
