@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Facebook, Instagram, Youtube, MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
 import FAQSection from "@/src/components/Faq/Faq";
 import DownloadAppSection from "@/src/components/DownloadApp/DownloadAppSection";
 import Footer from "@/src/components/Footer/Footer";
+import ContactForm from "@/src/components/Contact/ContactForm";
 import { satoshi } from "@/app/fonts";
+import { SOCIAL_LINKS } from "@/src/config/links";
 
 export const metadata: Metadata = {
   title: "Contact Us | CargolandFood",
@@ -24,10 +26,17 @@ function TikTokIcon() {
 }
 
 const socials = [
-  { label: "Facebook", href: "#", icon: <Facebook className="h-5 w-5" /> },
-  { label: "TikTok", href: "#", icon: <TikTokIcon /> },
-  { label: "Instagram", href: "#", icon: <Instagram className="h-5 w-5" /> },
-  { label: "YouTube", href: "#", icon: <Youtube className="h-5 w-5" /> },
+  {
+    label: "Facebook",
+    href: SOCIAL_LINKS.facebook,
+    icon: <Facebook className="h-5 w-5" />,
+  },
+  { label: "TikTok", href: SOCIAL_LINKS.tiktok, icon: <TikTokIcon /> },
+  {
+    label: "Instagram",
+    href: SOCIAL_LINKS.instagram,
+    icon: <Instagram className="h-5 w-5" />,
+  },
 ];
 
 export default function ContactUsPage() {
@@ -104,6 +113,8 @@ export default function ContactUsPage() {
                       <a
                         key={item.label}
                         href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         aria-label={item.label}
                         className="grid h-9 w-9 place-items-center rounded-full border border-[#E6E1DE] text-[#1F1614] transition hover:border-[#F76600] hover:text-[#F76600]"
                       >
@@ -116,33 +127,7 @@ export default function ContactUsPage() {
             </div>
 
             <div className="px-6 pb-10 pt-7 md:px-10 md:pb-12 md:pt-9">
-              <h2 className="text-[17px] font-bold text-[#1F1614]">
-                Type Here
-              </h2>
-
-              <div className="mt-4 rounded-[14px] border border-[#E6E1DE] bg-[#FAFAFA] p-4 md:p-5">
-                <div className="space-y-3">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full rounded-[10px] border border-transparent bg-white px-4 py-3 text-[13px] text-[#1F1614] placeholder:text-[#9A8F8A] shadow-sm outline-none transition focus:border-[#F76600]"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full rounded-[10px] border border-transparent bg-white px-4 py-3 text-[13px] text-[#1F1614] placeholder:text-[#9A8F8A] shadow-sm outline-none transition focus:border-[#F76600]"
-                  />
-                  <textarea
-                    placeholder="Final Address"
-                    rows={5}
-                    className="w-full resize-none rounded-[12px] border border-transparent bg-white px-4 py-3 text-[13px] text-[#1F1614] placeholder:text-[#9A8F8A] shadow-sm outline-none transition focus:border-[#F76600]"
-                  />
-                </div>
-              </div>
-
-              <button className="mt-6 rounded-full bg-[#F76600] px-10 py-3 text-[13px] font-semibold text-white shadow-sm transition hover:bg-[#E35D00]">
-                Submit
-              </button>
+              <ContactForm />
             </div>
           </div>
         </div>

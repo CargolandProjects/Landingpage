@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import { satoshi } from "@/app/fonts";
+import { SOCIAL_LINKS, WEB_APP_URL } from "@/src/config/links";
 
 function TikTokIcon() {
   return (
@@ -18,33 +19,29 @@ function TikTokIcon() {
 const socialLinks = [
   {
     label: "Facebook",
-    href: "#",
+    href: SOCIAL_LINKS.facebook,
     icon: <Facebook className="h-6 w-6 fill-current" strokeWidth={2.2} />,
   },
   {
     label: "TikTok",
-    href: "#",
+    href: SOCIAL_LINKS.tiktok,
     icon: <TikTokIcon />,
   },
   {
     label: "Instagram",
-    href: "#",
+    href: SOCIAL_LINKS.instagram,
     icon: <Instagram className="h-6 w-6" strokeWidth={2.2} />,
-  },
-  {
-    label: "YouTube",
-    href: "#",
-    icon: <Youtube className="h-6 w-6 fill-current" strokeWidth={2.2} />,
   },
 ];
 
 const supportLinks = [
   { label: "Privacy policy", href: "/privacy-policy" },
-  { label: "Terms and condition", href: "#" },
+  { label: "Terms and condition", href: "/terms" },
+  { label: "Delete account", href: "/delete-account" },
 ];
 
 const quickLinks = [
-  { label: "About us", href: "#" },
+  { label: "About us", href: "/about-us" },
   { label: "Contact us", href: "/contact-us" },
 ];
 
@@ -75,6 +72,8 @@ export default function Footer() {
                 <a
                   key={item.label}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={item.label}
                   className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-white/35 md:h-[52px] md:w-[52px]"
                 >
@@ -84,7 +83,12 @@ export default function Footer() {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="#" aria-label="Get it on Google Play">
+              <a
+                href={WEB_APP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get it on Google Play"
+              >
                 <Image
                   src="/images/store/google-play.png"
                   alt="Get it on Google Play"
@@ -94,7 +98,12 @@ export default function Footer() {
                 />
               </a>
 
-              <a href="#" aria-label="Download on the App Store">
+              <a
+                href={WEB_APP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download on the App Store"
+              >
                 <Image
                   src="/images/store/app-store.png"
                   alt="Download on the App Store"

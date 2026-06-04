@@ -23,7 +23,7 @@ export default function FeatureCarousel() {
   };
 
   return (
-    <section className="relative bg-[#f55b00] pt-[120px] pb-[72px]">
+    <section className="relative bg-[#f55b00] pt-[90px] md:pt-[120px] pb-[72px]">
       {/* TOP WAVE */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg
@@ -48,7 +48,7 @@ export default function FeatureCarousel() {
       <div className={`${satoshi.className} mx-auto max-w-[1240px] px-6`}>
         {/* HEADER */}
         <div className="mb-[56px] flex items-center justify-between">
-          <h3 className="text-white text-[34px] font-semibold leading-[1.15] tracking-[-0.02em]">
+          <h3 className="text-white text-2xl md:text-[34px] font-semibold leading-[1.15] tracking-[-0.02em]">
             Features That Elevate Your
             <br />
             Overall Experience

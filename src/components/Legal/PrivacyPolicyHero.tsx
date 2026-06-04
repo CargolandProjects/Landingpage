@@ -1,6 +1,12 @@
 import { satoshi } from "@/app/fonts";
 
-export default function PrivacyPolicyHero() {
+export default function PrivacyPolicyHero({
+  title = "Privacy Policy",
+  subtitle = "Learn how CargolandFood collects, uses, and protects your personal information.",
+}: {
+  title?: string;
+  subtitle?: string;
+}) {
   return (
     <section className="relative overflow-hidden bg-[#F76600]">
       <div
@@ -16,11 +22,10 @@ export default function PrivacyPolicyHero() {
         className={`relative mx-auto flex max-w-7xl flex-col items-center px-6 pb-12 pt-34 text-center text-white md:pb-14 md:pt-40 ${satoshi.className}`}
       >
         <h1 className="text-[34px] font-extrabold tracking-[-0.03em] md:text-[50px]">
-          Privacy Policy
+          {title}
         </h1>
         <p className="mt-3 max-w-[420px] text-sm leading-relaxed text-white/90 md:text-[16px]">
-          Learn how CargolandFood collects, uses, and protects your personal
-          information.
+          {subtitle}
         </p>
       </div>
     </section>

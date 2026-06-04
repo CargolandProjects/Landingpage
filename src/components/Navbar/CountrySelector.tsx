@@ -14,7 +14,7 @@ const countries = [
   {
     code: "GH",
     name: "Ghana",
-    flag: "/images/flags/gh.png",
+    flag: "/images/flags/gh.svg",
   },
 ];
 

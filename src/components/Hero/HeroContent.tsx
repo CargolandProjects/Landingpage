@@ -34,7 +34,7 @@ export default function HeroContent() {
           <img
             src="/images/feater.png"
             alt=""
-            className="pointer-events-none absolute -top-11 left-87 w-14 md:w-16"
+            className="pointer-events-none absolute -top-7 right-0 w-9 md:-top-11 md:w-16"
           />
         </span>{" "}
         <span className="font-extrabold">Meals, One Click</span>

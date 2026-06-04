@@ -3,7 +3,6 @@
 import { satoshi } from "@/app/fonts";
 import { motion } from "framer-motion";
 import { MapPin, Headphones, Sparkles, Utensils, StarIcon } from "lucide-react";
-import { text } from "stream/consumers";
 
 const items = [
   { text: "Highly rated riders", icon: MapPin, color: "#2ED573" },

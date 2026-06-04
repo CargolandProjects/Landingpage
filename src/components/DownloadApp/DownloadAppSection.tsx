@@ -6,11 +6,11 @@ import { downloadAppData } from "./downloadAppData";
 
 export default function DownloadAppSection() {
   return (
-    <section className="bg-white py-24 px-6">
+    <section className="bg-white py-16 md:py-24 px-6">
       <div
         className={`
           relative mx-auto max-w-7xl
-          h-[420px] lg:h-[460px]
+          min-h-[420px] lg:h-[460px]
           overflow-hidden rounded-[32px]
           bg-[#2B1E1E]
           ${satoshi.className}
@@ -29,14 +29,14 @@ export default function DownloadAppSection() {
         </div>
 
         {/* CONTENT */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 px-10 py-12">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 px-6 py-10 md:px-10 md:py-12">
           {/* LEFT CONTENT — stays fully visible */}
           <div className="text-white">
             <h2 className="text-2xl md:text-3xl lg:text-[42px] font-extrabold leading-tight">
               {downloadAppData.title}
             </h2>
 
-            <p className="mt-10 max-w-lg text-white/80 text-xl leading-relaxed">
+            <p className="mt-6 md:mt-10 max-w-lg text-white/80 text-base md:text-xl leading-relaxed">
               {downloadAppData.description}
             </p>
 
@@ -64,7 +64,7 @@ export default function DownloadAppSection() {
               width={320}
               height={640}
               priority
-              className="translate-y-5 translate-x-10 lg:translate-x-[-80px]"
+              className="translate-y-5 lg:translate-x-[-80px]"
             />
 
             {/* floating icons */}

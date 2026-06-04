@@ -4,11 +4,15 @@ import {
   type LegalSection,
 } from "./legalSections";
 
-export default function PrivacyPolicyContent() {
+export default function PrivacyPolicyContent({
+  sections = privacyPolicySections,
+}: {
+  sections?: LegalSection[];
+}) {
   return (
     <section className={`bg-white ${satoshi.className}`}>
       <div className="mx-auto max-w-[980px] px-6 py-10 md:py-14">
-        {privacyPolicySections.map((section) => (
+        {sections.map((section) => (
           <PolicyBlock key={section.title} section={section} />
         ))}
       </div>

@@ -15,7 +15,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative container mx-auto px-6 pt-38 pb-38">
+      <div className="relative container mx-auto px-6 pt-32 pb-24 md:pt-38 md:pb-38">
         <HeroContent />
       </div>
 

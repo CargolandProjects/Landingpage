@@ -10,11 +10,11 @@ export default function FAQSection() {
   const [active, setActive] = useState<number | null>(0);
 
   return (
-    <section className={`bg-white py-24 ${satoshi.className}`}>
+    <section className={`bg-white py-16 md:py-24 ${satoshi.className}`}>
       <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* LEFT — FAQ */}
         <div>
-          <h2 className="text-5xl font-extrabold text-[#1F1614] mb-10">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1F1614] mb-10">
             Frequently <br /> Asked Questions
           </h2>
 
@@ -54,7 +54,7 @@ export default function FAQSection() {
         </div>
 
         {/* RIGHT — PROMO CARD */}
-        <div className="relative rounded-[28px] bg-[#F25C05] h-[600px] p-10 text-white overflow-hidden">
+        <div className="relative rounded-[28px] bg-[#F25C05] min-h-[520px] md:h-[600px] p-8 md:p-10 text-white overflow-hidden">
           {/* DECOR ICONS */}
           <div className="absolute top-6 right-6 flex flex-col gap-3">
             <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
@@ -65,7 +65,7 @@ export default function FAQSection() {
             </div>
           </div>
 
-          <h3 className="text-4xl font-extrabold leading-tight">
+          <h3 className="text-3xl md:text-4xl font-extrabold leading-tight">
             What Makes Us <br />
             Different? Fresh <br />
             Flavors, Every Time
@@ -79,7 +79,7 @@ export default function FAQSection() {
           {/* PHONE */}
           <div className="mt-10 flex justify-center">
             <Image
-              src="/images/phone-mockup.png"
+              src="/images/phone-users.png"
               alt="Cargoland App"
               width={260}
               height={520}

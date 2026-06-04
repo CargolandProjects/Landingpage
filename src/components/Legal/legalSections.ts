@@ -86,3 +86,123 @@ export const privacyPolicySections: LegalSection[] = [
     ],
   },
 ];
+
+// NOTE: Placeholder copy — replace with the final, legally-reviewed wording.
+export const termsSections: LegalSection[] = [
+  {
+    title: "INTRODUCTION",
+    paragraphs: [
+      "These Terms & Conditions govern your access to and use of the CargolandFood website and mobile applications. By using our Services, you agree to be bound by these terms. If you do not agree, please discontinue use of the Services.",
+    ],
+  },
+  {
+    title: "ELIGIBILITY",
+    paragraphs: [
+      "You must be at least 18 years old, or the age of legal majority in your jurisdiction, to create an account and place orders through CargolandFood.",
+    ],
+  },
+  {
+    title: "ACCOUNTS",
+    paragraphs: [
+      "You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. Please notify us immediately of any unauthorized use.",
+    ],
+  },
+  {
+    title: "ORDERS AND PAYMENTS",
+    paragraphs: [
+      "All orders placed through the Services are subject to acceptance and availability. Prices, delivery fees, and applicable taxes are shown at checkout. Payment is processed through our approved payment partners.",
+    ],
+  },
+  {
+    title: "DELIVERY",
+    paragraphs: [
+      "We work with vendors and delivery partners to fulfill your orders. Estimated delivery times are provided for convenience and are not guaranteed. Risk in the goods passes to you on delivery.",
+    ],
+  },
+  {
+    title: "CANCELLATIONS AND REFUNDS",
+    paragraphs: [
+      "Cancellation and refund eligibility depends on the status of your order and the vendor's policy. Where a refund is approved, it will be processed to your original payment method.",
+    ],
+  },
+  {
+    title: "ACCEPTABLE USE",
+    paragraphs: [
+      "You agree not to misuse the Services, including by attempting to disrupt them, accessing them through unauthorized means, or using them for any unlawful purpose.",
+    ],
+  },
+  {
+    title: "LIMITATION OF LIABILITY",
+    paragraphs: [
+      "To the maximum extent permitted by law, CargolandFood shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Services.",
+    ],
+  },
+  {
+    title: "CHANGES TO THESE TERMS",
+    paragraphs: [
+      "We may update these Terms from time to time. Continued use of the Services after changes are posted constitutes acceptance of the updated Terms.",
+    ],
+  },
+  {
+    title: "CONTACT US",
+    paragraphs: [
+      "If you have any questions about these Terms & Conditions, please contact us at: CARGOLAND FOOD NIGERIA LIMITED, info@cargolandfood.com.",
+    ],
+  },
+];
+
+// NOTE: Placeholder copy — replace with the final About content.
+export const aboutUsSections: LegalSection[] = [
+  {
+    title: "WHO WE ARE",
+    paragraphs: [
+      "CargolandFood is a food ordering and delivery platform connecting hungry customers with great restaurants and reliable riders. We make it easy to discover meals you love and get them delivered fresh and fast.",
+    ],
+  },
+  {
+    title: "OUR MISSION",
+    paragraphs: [
+      "Our mission is to make delicious food accessible to everyone, while empowering local vendors to grow their businesses and giving riders flexible earning opportunities.",
+    ],
+  },
+  {
+    title: "WHAT WE OFFER",
+    paragraphs: [
+      "From a wide selection of quality meals and quick-grab groceries to highly rated riders and 24/7 support, CargolandFood is built around a seamless, dependable experience for customers, vendors, and delivery partners alike.",
+    ],
+  },
+  {
+    title: "GET IN TOUCH",
+    paragraphs: [
+      "Have a question or want to partner with us? Reach out at info@cargolandfood.com or visit our Contact page.",
+    ],
+  },
+];
+
+// Account & data deletion — required for Google Play's data-deletion policy.
+export const deleteAccountSections: LegalSection[] = [
+  {
+    title: "WHAT GETS DELETED",
+    paragraphs: [
+      "When your account deletion request is processed, we permanently remove the personal information associated with your CargolandFood account. This includes your profile details (name, email address, and phone number), saved delivery addresses, order preferences, and any saved payment tokens held on our systems.",
+    ],
+  },
+  {
+    title: "WHAT WE MAY RETAIN",
+    paragraphs: [
+      "Certain records may be retained for a limited period where we are legally required to do so — for example, transaction and order records needed for tax, accounting, dispute resolution, and fraud-prevention purposes. Such data is kept only for as long as required by applicable Nigerian law and is then deleted or anonymized.",
+    ],
+  },
+  {
+    title: "HOW LONG IT TAKES",
+    paragraphs: [
+      "Once we verify that the request comes from the account owner, we process deletions within 30 days. We will confirm by email when your account and associated data have been removed.",
+    ],
+  },
+  {
+    title: "BEFORE YOU DELETE",
+    paragraphs: [
+      "Account deletion is permanent and cannot be undone. Please make sure you have no active or in-progress orders, and that any wallet balance or pending refunds have been resolved, before submitting your request. After deletion you will lose access to your order history and will need to create a new account to use CargolandFood again.",
+    ],
+  },
+];
