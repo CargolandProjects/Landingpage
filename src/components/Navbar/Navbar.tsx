@@ -21,8 +21,6 @@ import {
 const moreLinks = [
   { label: "About us", href: "/about-us" },
   { label: "Contact us", href: "/contact-us" },
-  { label: "Terms & Conditions", href: "/terms" },
-  { label: "Delete account", href: "/delete-account" },
 ];
 
 export default function Navbar() {
@@ -34,8 +32,8 @@ export default function Navbar() {
       <div
         className={`mx-auto flex max-w-7xl ${satoshi.className} items-center justify-between px-4 sm:px-6`}
       >
-        {/* LOGO — single image unit */}
-        <div className="rounded-xl px-2 py-3 sm:px-4">
+        {/* LOGO — links to home */}
+        <Link href="/" className="rounded-xl px-2 py-3 sm:px-4" aria-label="CargolandFood home">
           <Image
             src="/images/logo2.png"
             alt="CargolandFood"
@@ -45,7 +43,7 @@ export default function Navbar() {
             unoptimized
             className="h-auto w-[100px] sm:w-[120px]"
           />
-        </div>
+        </Link>
 
         {/* CENTER NAV PILL (desktop) */}
         <div className="hidden md:flex items-center gap-10 rounded-full bg-[#2D2020] px-10 py-4 text-sm text-[#F4F1EE]">
@@ -90,7 +88,7 @@ export default function Navbar() {
               // top-full + pt-4 keeps the hover area continuous (no gap that
               // would trigger onMouseLeave between the trigger and the menu)
               <div className="absolute left-0 top-full pt-4">
-                <div className="flex w-44 flex-col overflow-hidden rounded-2xl bg-white py-2 text-[#1F1614] shadow-lg">
+                <div className="flex w-44 flex-col overflow-hidden rounded-3xl bg-white py-2 text-[#1F1614] shadow-lg">
                   {moreLinks.map((item) => (
                     <Link
                       key={item.label}

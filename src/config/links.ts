@@ -5,7 +5,7 @@
 export const WEB_APP_URL = "https://app.cargolandfood.com";
 
 // Auth / role portals.
-export const SIGNUP_URL = "https://app.cargolandfood.com/signup";
+export const SIGNUP_URL = "https://eat.cargolandfood.com";
 export const VENDOR_PORTAL_URL = "https://vendor.cargolandfood.com";
 export const RIDER_PORTAL_URL = "https://rider.cargolandfood.com";
 
