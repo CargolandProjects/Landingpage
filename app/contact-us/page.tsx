@@ -78,7 +78,7 @@ export default function ContactUsPage() {
                     Address
                   </p>
                   <p className="mt-2 text-[12.5px] leading-relaxed text-[#6B625E]">
-                    1 Awori St, Papa Ashafa, Lagos 102212, Lagos, N
+                    49, Oguntade Road, Salami Bus Stop, Shaha, Lagos, Nigeria
                   </p>
                 </div>
               </div>

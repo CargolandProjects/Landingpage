@@ -141,14 +141,14 @@ export default function Footer() {
 
           <FooterColumn title="Contact Us">
             <a
-              href="https://maps.google.com/?q=1+Awori+St,+Papa+Ashafa,+Lagos+102212,+Lagos+Nigeria"
+              href="https://maps.google.com/?q=49+Oguntade+Road,+Salami+Bus+Stop,+Shaha,+Lagos,+Nigeria"
               target="_blank"
               rel="noreferrer"
               className="text-[15px] leading-[1.6] text-[#F1E7E1] underline underline-offset-4 decoration-1 sm:text-[16px] md:text-[18px]"
             >
-              1 Awori St, Papa Ashafa,
+              49, Oguntade Road, Salami Bus Stop,
               <br />
-              Lagos 102212, Lagos Nigeria
+              Shaha, Lagos, Nigeria
             </a>
 
             <a
