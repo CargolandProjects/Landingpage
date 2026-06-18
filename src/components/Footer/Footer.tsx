@@ -159,10 +159,17 @@ export default function Footer() {
             </a>
 
             <a
-              href="tel:+2347046787905"
+              href="tel:+2347032795341"
               className="text-[15px] leading-[1.6] text-[#F1E7E1] transition hover:text-white sm:text-[16px] md:text-[18px]"
             >
-              +2347046787905
+              0703 279 5341
+            </a>
+
+            <a
+              href="tel:+2348167399885"
+              className="text-[15px] leading-[1.6] text-[#F1E7E1] transition hover:text-white sm:text-[16px] md:text-[18px]"
+            >
+              0816 739 9885
             </a>
           </FooterColumn>
         </div>

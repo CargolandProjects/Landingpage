@@ -92,7 +92,10 @@ export default function ContactUsPage() {
                     Contact
                   </p>
                   <p className="mt-2 text-[12.5px] leading-relaxed text-[#6B625E]">
-                    Phone: +2347046787905
+                    Phone: 0703 279 5341
+                  </p>
+                  <p className="text-[12.5px] leading-relaxed text-[#6B625E]">
+                    Phone: 0816 739 9885
                   </p>
                   <p className="text-[12.5px] leading-relaxed text-[#6B625E]">
                     Email: info@cargolandfood.com
