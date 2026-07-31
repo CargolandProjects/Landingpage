@@ -1,10 +1,18 @@
 // Single source of truth for external destinations.
 // Replace the placeholder values below with real URLs before launch.
 
-// Web ordering app — used by "Order Now", "Download App", and the app-store badges.
-export const WEB_APP_URL = "https://app.cargolandfood.com";
+// Web ordering app — used by "Order Now" and "Download App".
+export const WEB_APP_URL = "https://eat.cargolandfood.com/";
 
-// Auth / role portals.
+// Native apps. The iOS build is not published yet — the App Store badge shows a
+// "coming soon" note instead of linking anywhere.
+export const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.cargoland.user&pcampaignid=web_share";
+export const APP_STORE_URL: string | null = null;
+
+// Auth / role portals. The vendor and rider portals are not live yet — the
+// navbar shows those entries greyed out with a "coming soon" note, so nothing
+// links to them today.
 export const SIGNUP_URL = "https://eat.cargolandfood.com";
 export const VENDOR_PORTAL_URL = "https://vendor.cargolandfood.com";
 export const RIDER_PORTAL_URL = "https://rider.cargolandfood.com";
