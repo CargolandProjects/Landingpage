@@ -12,15 +12,18 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import CountrySelector from "./CountrySelector";
-import {
-  SIGNUP_URL,
-  VENDOR_PORTAL_URL,
-  RIDER_PORTAL_URL,
-} from "@/src/config/links";
+import { SIGNUP_URL } from "@/src/config/links";
 
 const moreLinks = [
   { label: "About us", href: "/about-us" },
   { label: "Contact us", href: "/contact-us" },
+];
+
+// Portals aren't live yet — shown greyed out with a "coming soon" note instead
+// of linking to VENDOR_PORTAL_URL / RIDER_PORTAL_URL.
+const portalLinks = [
+  { label: "Vendor/Restaurant", icon: "🏪" },
+  { label: "Delivery man", icon: "🛵" },
 ];
 
 export default function Navbar() {
@@ -47,25 +50,21 @@ export default function Navbar() {
 
         {/* CENTER NAV PILL (desktop) */}
         <div className="hidden md:flex items-center gap-10 rounded-full bg-[#2D2020] px-10 py-4 text-sm text-[#F4F1EE]">
-          <a
-            href={VENDOR_PORTAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 font-medium cursor-pointer transition hover:text-white"
-          >
-            <span>🏪</span>
-            <span>Vendor/Restaurant</span>
-          </a>
+          {portalLinks.map((item) => (
+            // Tooltip on hover instead of an inline badge — the pill is already
+            // tight at the md breakpoint.
+            <div key={item.label} className="group relative">
+              <span className="flex cursor-not-allowed items-center gap-2 font-medium text-[#F4F1EE]/40">
+                <span className="opacity-60 grayscale">{item.icon}</span>
+                <span>{item.label}</span>
+                <span className="sr-only">(coming soon)</span>
+              </span>
 
-          <a
-            href={RIDER_PORTAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 font-medium cursor-pointer transition hover:text-white"
-          >
-            <span>🛵</span>
-            <span>Delivery man</span>
-          </a>
+              <span className="pointer-events-none absolute left-1/2 top-full z-20 mt-3 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-[#2D2020] opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100">
+                Coming soon
+              </span>
+            </div>
+          ))}
 
           {/* MORE DROPDOWN */}
           <div
@@ -153,27 +152,18 @@ export default function Navbar() {
       {menuOpen && (
         <div className={`md:hidden ${satoshi.className} px-4 sm:px-6`}>
           <div className="mt-3 flex flex-col gap-1 rounded-2xl bg-white p-3 text-[#1F1614] shadow-xl">
-            <a
-              href={VENDOR_PORTAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition hover:bg-[#FFF3EA]"
-            >
-              <span>🏪</span>
-              <span>Vendor/Restaurant</span>
-            </a>
-
-            <a
-              href={RIDER_PORTAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition hover:bg-[#FFF3EA]"
-            >
-              <span>🛵</span>
-              <span>Delivery man</span>
-            </a>
+            {portalLinks.map((item) => (
+              <div
+                key={item.label}
+                className="flex cursor-not-allowed items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-[#1F1614]/40"
+              >
+                <span className="opacity-60 grayscale">{item.icon}</span>
+                <span>{item.label}</span>
+                <span className="ml-auto rounded-full bg-[#F3E6DE] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#9C8A80]">
+                  Coming soon
+                </span>
+              </div>
+            ))}
 
             <div className="my-1 h-px bg-[#F3E6DE]" />
 
