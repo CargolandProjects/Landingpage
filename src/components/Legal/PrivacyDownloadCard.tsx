@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { satoshi } from "@/app/fonts";
+import StoreBadges from "@/src/components/StoreBadges/StoreBadges";
 
 export default function PrivacyDownloadCard() {
   return (
@@ -29,22 +30,11 @@ export default function PrivacyDownloadCard() {
                 anytime.
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Image
-                  src="/images/store/google-play.png"
-                  alt="Get it on Google Play"
-                  width={138}
-                  height={41}
-                  className="h-auto w-[138px]"
-                />
-                <Image
-                  src="/images/store/app-store.png"
-                  alt="Download on the App Store"
-                  width={122}
-                  height={41}
-                  className="h-auto w-[122px]"
-                />
-              </div>
+              <StoreBadges
+                className="mt-6 gap-3"
+                play={{ width: 138, height: 41, className: "h-auto w-[138px]" }}
+                apple={{ width: 122, height: 41, className: "h-auto w-[122px]" }}
+              />
             </div>
 
             <div className="relative flex justify-center md:justify-end">

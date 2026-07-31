@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { satoshi } from "@/app/fonts";
+import StoreBadges from "@/src/components/StoreBadges/StoreBadges";
 import { downloadAppData } from "./downloadAppData";
 
 export default function DownloadAppSection() {
@@ -40,20 +41,11 @@ export default function DownloadAppSection() {
               {downloadAppData.description}
             </p>
 
-            <div className="mt-10 flex gap-4">
-              <Image
-                src={downloadAppData.googlePlay}
-                alt="Google Play"
-                width={170}
-                height={52}
-              />
-              <Image
-                src={downloadAppData.appStore}
-                alt="App Store"
-                width={170}
-                height={52}
-              />
-            </div>
+            <StoreBadges
+              className="mt-10 gap-4"
+              play={{ width: 170, height: 52 }}
+              apple={{ width: 170, height: 52 }}
+            />
           </div>
 
           {/* RIGHT PHONE — intentionally overflows */}

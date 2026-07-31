@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Instagram } from "lucide-react";
 import { satoshi } from "@/app/fonts";
-import { SOCIAL_LINKS, WEB_APP_URL } from "@/src/config/links";
+import { SOCIAL_LINKS } from "@/src/config/links";
+import StoreBadges from "@/src/components/StoreBadges/StoreBadges";
 
 function TikTokIcon() {
   return (
@@ -82,37 +83,19 @@ export default function Footer() {
               ))}
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href={WEB_APP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Get it on Google Play"
-              >
-                <Image
-                  src="/images/store/google-play.png"
-                  alt="Get it on Google Play"
-                  width={170}
-                  height={50}
-                  className="h-auto w-[148px] md:w-[170px]"
-                />
-              </a>
-
-              <a
-                href={WEB_APP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Download on the App Store"
-              >
-                <Image
-                  src="/images/store/app-store.png"
-                  alt="Download on the App Store"
-                  width={150}
-                  height={50}
-                  className="h-auto w-[134px] md:w-[150px]"
-                />
-              </a>
-            </div>
+            <StoreBadges
+              className="mt-10 gap-4"
+              play={{
+                width: 170,
+                height: 50,
+                className: "h-auto w-[148px] md:w-[170px]",
+              }}
+              apple={{
+                width: 150,
+                height: 50,
+                className: "h-auto w-[134px] md:w-[150px]",
+              }}
+            />
           </div>
 
           <FooterColumn title="Support">
