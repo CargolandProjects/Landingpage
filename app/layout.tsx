@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { sail, satoshi } from "./fonts";
 import Navbar from "@/src/components/Navbar/Navbar";
+import PixelScripts from "./PixelScripts";
 
 export const metadata: Metadata = {
   title: "CargolandFood – Delicious Meals, One Click",
@@ -16,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${satoshi.variable} ${sail.variable}`}>
+      <head>
+        <PixelScripts />
+      </head>
       <body className="font-sans antialiased">
         <Navbar />
         {children}
