@@ -1,13 +1,21 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeUp } from "./motion";
 import { Apple, ArrowRightCircle, Play } from "lucide-react";
-import { APP_STORE_URL, PLAY_STORE_URL, WEB_APP_URL } from "@/src/config/links";
-import { useState } from "react";
+import { PLAY_STORE_URL, WEB_APP_URL } from "@/src/config/links";
 
 export default function HeroActions() {
-  const [isOpen, setIsOpen] = useState(false);
+  // Helper to safely fire the Meta Pixel event
+  const trackLead = () => {
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "Lead", {
+        content_name: "Google Play Download",
+        content_category: "App Download",
+      });
+    }
+  };
 
   return (
     <motion.div
@@ -56,19 +64,23 @@ export default function HeroActions() {
                      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0  group-hover:delay-80
                      group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0"
         >
-          <a
-            href={APP_STORE_URL || "#"}
+          <button
+            // href={APP_STORE_URL || "#"}
             // target="_blank"
             // rel="noopener noreferrer"
-            className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-[#1F1F1F] hover:bg-[#F25C05]/8 transition-colors hover:text-[#F25C05]"
+            disabled
+            className="relative flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-[#1F1F1F] hover:bg-[#F25C05]/8 transition-colors hover:text-[#F25C05] w-full"
           >
+            {/* Unavalable indicator overlay */}
+            <div className="absolute inset-0 right-2 flex justify-end items-center backdrop-blur-[1px]" />
             <Apple size={18} />
             App Store
-          </a>
+          </button>
           <a
             href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackLead}
             className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-[#1F1F1F] hover:bg-[#F25C05]/8 transition-colors hover:text-[#F25C05]"
           >
             <Play size={18} />
